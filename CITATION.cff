@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: gem-lasso
+message: >-
+  If you use gem-lasso in research software, analysis workflows, or academic
+  writing, please cite the software record described in this file.
+type: software
+license: MIT
+authors:
+  - name: OpenAI Codex
+version: 0.1.0.dev0
+abstract: >-
+  gem-lasso is a clean-room Python implementation of Gaussian mixture modeling
+  with sparse component precision matrices, including penalized-EM and posthoc
+  sparse network extraction workflows.
+keywords:
+  - Gaussian mixture model
+  - graphical lasso
+  - sparse precision matrix
+  - clustering
+  - research software
