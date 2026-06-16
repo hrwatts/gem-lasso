@@ -1,0 +1,199 @@
+{
+  "baseline_count": 4,
+  "baseline_order": [
+    "penalized_em",
+    "posthoc",
+    "dense_gaussian_mixture",
+    "oracle_known_labels"
+  ],
+  "benchmark_type": "small_deterministic_synthetic_snapshot",
+  "metric_definitions": {
+    "adjusted_rand_index": "Adjusted Rand index between predicted labels and sampled labels on the evaluation set.",
+    "aligned_accuracy": "Fraction of evaluation labels matched after deterministic permutation alignment between predicted and sampled labels.",
+    "estimated_edge_count": "Total number of estimated undirected off-diagonal edges across aligned components.",
+    "fallback_count": "Count of component-level sparse-precision fallback events recorded during fitting.",
+    "support_f1": "F1 score of the undirected off-diagonal precision-support estimate after component alignment against the synthetic truth.",
+    "support_precision": "Precision of the undirected off-diagonal precision-support estimate after component alignment against the synthetic truth.",
+    "support_recall": "Recall of the undirected off-diagonal precision-support estimate after component alignment against the synthetic truth.",
+    "test_score": "Average observed-data log-likelihood on the synthetic test set.",
+    "train_score": "Average observed-data log-likelihood on the synthetic training set.",
+    "true_edge_count": "Total number of true undirected off-diagonal edges across components.",
+    "warning_count": "Count of warning messages recorded during fitting."
+  },
+  "runtime_metrics_included": false,
+  "scenario_count": 3,
+  "scenario_set": "paper",
+  "scenarios": [
+    {
+      "alpha": 0.05,
+      "description": "Two-component low-dimensional mixture with clear separation.",
+      "diagonal_shift": 0.7,
+      "edge_probs": [
+        0.15,
+        0.2
+      ],
+      "max_iter": 40,
+      "means": [
+        [
+          -2.5,
+          -1.9,
+          0.3,
+          0.8,
+          1.1
+        ],
+        [
+          2.4,
+          1.8,
+          -0.4,
+          -0.7,
+          -1.2
+        ]
+      ],
+      "n_components": 2,
+      "n_features": 5,
+      "n_test": 900,
+      "n_train": 240,
+      "precision_seeds": [
+        11,
+        29
+      ],
+      "reg_covar": 1e-06,
+      "replicate_seeds": [
+        8101,
+        8102,
+        8103
+      ],
+      "scenario_id": "separated_k2_d5_sparse",
+      "tol": 0.0001,
+      "true_support_edge_counts": [
+        1,
+        1
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "alpha": 0.05,
+      "description": "Two-component low-dimensional mixture with stronger overlap.",
+      "diagonal_shift": 0.7,
+      "edge_probs": [
+        0.15,
+        0.2
+      ],
+      "max_iter": 40,
+      "means": [
+        [
+          -1.2,
+          -0.8,
+          0.0,
+          0.3,
+          0.4
+        ],
+        [
+          1.0,
+          0.9,
+          0.1,
+          -0.2,
+          -0.3
+        ]
+      ],
+      "n_components": 2,
+      "n_features": 5,
+      "n_test": 900,
+      "n_train": 240,
+      "precision_seeds": [
+        41,
+        53
+      ],
+      "reg_covar": 1e-06,
+      "replicate_seeds": [
+        8201,
+        8202,
+        8203
+      ],
+      "scenario_id": "overlapping_k2_d5_sparse",
+      "tol": 0.0001,
+      "true_support_edge_counts": [
+        3,
+        0
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "alpha": 0.05,
+      "description": "Three-component moderate-dimensional sparse-support scenario.",
+      "diagonal_shift": 0.8,
+      "edge_probs": [
+        0.1,
+        0.15,
+        0.2
+      ],
+      "max_iter": 40,
+      "means": [
+        [
+          -2.2,
+          -1.7,
+          0.2,
+          0.8,
+          0.4,
+          -0.3,
+          0.6,
+          -0.1
+        ],
+        [
+          0.4,
+          1.3,
+          1.6,
+          -0.5,
+          0.0,
+          0.8,
+          -0.2,
+          0.5
+        ],
+        [
+          2.0,
+          -0.2,
+          2.1,
+          0.9,
+          -0.6,
+          0.2,
+          1.2,
+          -0.7
+        ]
+      ],
+      "n_components": 3,
+      "n_features": 8,
+      "n_test": 1200,
+      "n_train": 360,
+      "precision_seeds": [
+        71,
+        83,
+        97
+      ],
+      "reg_covar": 1e-06,
+      "replicate_seeds": [
+        8301,
+        8302
+      ],
+      "scenario_id": "moderate_k3_d8_sparse",
+      "tol": 0.0001,
+      "true_support_edge_counts": [
+        1,
+        4,
+        5
+      ],
+      "weights": [
+        0.34,
+        0.31,
+        0.35
+      ]
+    }
+  ],
+  "script_name": "run_synthetic.py",
+  "test_seed_offset": 10000
+}

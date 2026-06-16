@@ -1,0 +1,39 @@
+{
+  "diagonal_shift": 0.7,
+  "figure_type": "synthetic_precision_support",
+  "finite_schema_checks": {
+    "all_panels_valid": true,
+    "panel_count_matches_expected": true
+  },
+  "n_features": 12,
+  "output_filenames": {
+    "figure": "precision_support_low_edge_prob_vs_high_edge_prob.png",
+    "summary": "precision_support_low_edge_prob_vs_high_edge_prob.json"
+  },
+  "panels": [
+    {
+      "edge_prob": 0.2,
+      "finite_covariance": true,
+      "finite_precision": true,
+      "label": "Low edge probability",
+      "random_state": 11,
+      "support_label": "Sparse support",
+      "symmetric_support": true,
+      "undirected_edge_count": 17,
+      "zero_diagonal": true
+    },
+    {
+      "edge_prob": 0.8,
+      "finite_covariance": true,
+      "finite_precision": true,
+      "label": "High edge probability",
+      "random_state": 29,
+      "support_label": "Denser support",
+      "symmetric_support": true,
+      "undirected_edge_count": 49,
+      "zero_diagonal": true
+    }
+  ],
+  "script_name": "plot_precision_supports.py",
+  "threshold": 1e-08
+}
