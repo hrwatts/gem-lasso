@@ -1,5 +1,10 @@
 # gem-lasso
 
+[![CI](https://github.com/hrwatts/gem-lasso/actions/workflows/ci.yml/badge.svg)](https://github.com/hrwatts/gem-lasso/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/hrwatts/gem-lasso)](LICENSE)
+[![Python >=3.10](https://img.shields.io/badge/python-%3E%3D3.10-blue)](pyproject.toml)
+[![Package status: not on PyPI](https://img.shields.io/badge/package-not%20on%20PyPI-lightgrey)](docs/release.md)
+
 `gem-lasso` is a clean Python implementation of Gaussian mixture modeling with
 sparse component precision matrices and graph extraction.
 
