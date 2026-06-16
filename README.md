@@ -159,6 +159,12 @@ not support broad performance claims.
 
 Regenerate the current synthetic manuscript figures with:
 
+Requires the plotting extra (or the full dev extra):
+
+```bash
+python -m pip install -e .[examples]
+```
+
 ```bash
 python examples/plot_precision_supports.py
 python examples/compare_estimator_modes.py
@@ -167,7 +173,7 @@ python examples/compare_estimator_modes.py
 Regenerate the tracked small-scope synthetic benchmark snapshot with:
 
 ```bash
-py -3.10 benchmarks/run_synthetic.py --scenario-set paper --output-root .
+python benchmarks/run_synthetic.py --scenario-set paper --output-root .
 ```
 
 ## Documentation

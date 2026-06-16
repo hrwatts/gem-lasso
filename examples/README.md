@@ -18,6 +18,12 @@ claims.
 The Stage 1 figure scripts generate deterministic synthetic illustrations for
 the manuscript and save both a PNG figure and a JSON summary:
 
+Requires the plotting extra:
+
+```bash
+python -m pip install -e .[examples]
+```
+
 ```bash
 python examples/plot_precision_supports.py
 python examples/compare_estimator_modes.py

@@ -70,13 +70,13 @@ validation.
 Smoke-only test run to a temporary directory:
 
 ```bash
-py -3.10 benchmarks/run_synthetic.py --scenario-set smoke --output-root <tempdir>
+python benchmarks/run_synthetic.py --scenario-set smoke --output-root <tempdir>
 ```
 
 Tracked paper-scenario regeneration from the repository root:
 
 ```bash
-py -3.10 benchmarks/run_synthetic.py --scenario-set paper --output-root .
+python benchmarks/run_synthetic.py --scenario-set paper --output-root .
 ```
 
 The runner writes machine-readable outputs and then renders TeX tables from the

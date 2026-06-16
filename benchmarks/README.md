@@ -10,13 +10,13 @@ superiority claims.
 Smoke scenario set, for tests or local validation:
 
 ```bash
-py -3.10 benchmarks/run_synthetic.py --scenario-set smoke --output-root <tempdir>
+python benchmarks/run_synthetic.py --scenario-set smoke --output-root <tempdir>
 ```
 
 Paper scenario set, for tracked deterministic outputs:
 
 ```bash
-py -3.10 benchmarks/run_synthetic.py --scenario-set paper --output-root .
+python benchmarks/run_synthetic.py --scenario-set paper --output-root .
 ```
 
 ## Output Files
