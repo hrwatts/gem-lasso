@@ -1,22 +1,32 @@
 # Benchmarks
 
-This directory contains benchmark scaffolding only. No benchmark results are
-checked into the repository unless they come from actual benchmark runs.
+This directory contains the deterministic synthetic benchmark runner and
+scenario registry for Stage 2. The benchmark layer is synthetic only. It does
+not use public datasets and it should not be used to support real-data or broad
+superiority claims.
 
-Suggested comparisons:
+## Commands
 
-- `GaussianMixtureGraphicalLasso(mode="penalized_em")`
-- `GaussianMixtureGraphicalLasso(mode="posthoc")`
-- `sklearn.mixture.GaussianMixture`
-- direct per-component `graphical_lasso` fits on known component assignments
+Smoke scenario set, for tests or local validation:
 
-Suggested synthetic axes:
+```bash
+python benchmarks/run_synthetic.py --scenario-set smoke --output-root <tempdir>
+```
 
-- sample size `n`
-- feature dimension `d`
-- number of components `K`
-- separation between component means
-- sparsity penalty `alpha`
+Paper scenario set, for tracked deterministic outputs:
 
-Use the scaffold script in this directory to define configurations and record
-results outside the docs before publishing any benchmark claims.
+```bash
+python benchmarks/run_synthetic.py --scenario-set paper --output-root .
+```
+
+## Output Files
+
+The runner writes:
+
+- `benchmarks/generated/synthetic_benchmark_results.csv`
+- `benchmarks/generated/synthetic_benchmark_summary.json`
+- `benchmarks/generated/synthetic_scenario_manifest.json`
+- `docs/tex/generated/synthetic_benchmark_score_table.tex`
+- `docs/tex/generated/synthetic_benchmark_support_table.tex`
+
+Smoke outputs should remain in temporary directories only.

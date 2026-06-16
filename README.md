@@ -21,7 +21,7 @@ The current repository supports:
   scikit-learn while using sparse precision estimation only for downstream
   network extraction,
 - lightweight model-selection helpers,
-- runnable examples and benchmark scaffolding.
+- runnable examples and a small deterministic synthetic benchmark layer.
 
 Deferred work now focuses on release polish, CI hardening, and any future
 estimator extensions beyond the current API.
@@ -149,10 +149,32 @@ The `examples/` directory contains runnable smoke-test examples for:
 
 - penalized EM fitting,
 - the posthoc baseline,
-- grid-based model selection.
+- grid-based model selection,
+- deterministic synthetic figure generation for the manuscript.
 
-The `benchmarks/` directory contains scaffold code and planning documents only.
-It does not include benchmark claims or checked-in results.
+The `benchmarks/` directory contains a small deterministic synthetic benchmark
+runner, machine-readable outputs, and generated TeX table snippets. These
+benchmark artifacts are synthetic only; they are not real-data evidence and do
+not support broad performance claims.
+
+Regenerate the current synthetic manuscript figures with:
+
+Requires the plotting extra (or the full dev extra):
+
+```bash
+python -m pip install -e .[examples]
+```
+
+```bash
+python examples/plot_precision_supports.py
+python examples/compare_estimator_modes.py
+```
+
+Regenerate the tracked small-scope synthetic benchmark snapshot with:
+
+```bash
+python benchmarks/run_synthetic.py --scenario-set paper --output-root .
+```
 
 ## Documentation
 

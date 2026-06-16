@@ -1,0 +1,75 @@
+{
+  "dataset_random_state": 7,
+  "figure_type": "synthetic_estimator_mode_comparison",
+  "finite_schema_checks": {
+    "all_scores_finite": true,
+    "all_weights_sum_close_to_one": true
+  },
+  "models": {
+    "penalized_em": {
+      "adjacency_edge_counts": [
+        3,
+        3
+      ],
+      "converged": true,
+      "likelihood_source": "sparse_in_loop_estimator",
+      "mode": "penalized_em",
+      "n_components": 2,
+      "n_features": 3,
+      "n_iter": 2,
+      "plot_label_alignment": {
+        "aligned_for_plotting_only": true,
+        "mapping": {
+          "0": 1,
+          "1": 0
+        },
+        "matched_sample_count": 179,
+        "matched_sample_fraction": 0.9944444444444445,
+        "reference": "sampled_labels"
+      },
+      "random_state": 3,
+      "score": -4.619173038246447,
+      "score_is_finite": true,
+      "weights_sum": 1.0,
+      "weights_sum_close_to_one": true
+    },
+    "posthoc": {
+      "adjacency_edge_counts": [
+        3,
+        3
+      ],
+      "converged": true,
+      "likelihood_source": "dense_gaussian_mixture_then_sparse_precision",
+      "mode": "posthoc",
+      "n_components": 2,
+      "n_features": 3,
+      "n_iter": 2,
+      "plot_label_alignment": {
+        "aligned_for_plotting_only": true,
+        "mapping": {
+          "0": 1,
+          "1": 0
+        },
+        "matched_sample_count": 179,
+        "matched_sample_fraction": 0.9944444444444445,
+        "reference": "sampled_labels"
+      },
+      "random_state": 5,
+      "score": -4.615996835583081,
+      "score_is_finite": true,
+      "weights_sum": 0.9999999999999997,
+      "weights_sum_close_to_one": true
+    }
+  },
+  "n_features": 3,
+  "n_samples": 180,
+  "output_filenames": {
+    "figure": "estimator_modes_shared_synthetic_dataset.png",
+    "summary": "estimator_modes_shared_synthetic_dataset.json"
+  },
+  "scatter_feature_indices": [
+    0,
+    1
+  ],
+  "script_name": "compare_estimator_modes.py"
+}

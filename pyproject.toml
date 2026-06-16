@@ -37,6 +37,7 @@ examples = [
 ]
 dev = [
   "build>=1.2",
+  "matplotlib>=3.8",
   "mypy>=1.10",
   "pytest>=8.2",
   "ruff>=0.5",
