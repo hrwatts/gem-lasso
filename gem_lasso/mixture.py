@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import inspect
 import warnings
 from dataclasses import dataclass
 from typing import Any
@@ -323,7 +324,12 @@ class GaussianMixtureGraphicalLasso(BaseEstimator, ClusterMixin):
         return precision_support(self.precisions_[component], threshold=threshold)
 
     def _validate_X(self, X: np.ndarray) -> np.ndarray:
-        return check_array(X, dtype=float, ensure_2d=True, force_all_finite=True)
+        check_array_kwargs: dict[str, Any] = {"dtype": float, "ensure_2d": True}
+        if "ensure_all_finite" in inspect.signature(check_array).parameters:
+            check_array_kwargs["ensure_all_finite"] = True
+        else:
+            check_array_kwargs["force_all_finite"] = True
+        return check_array(X, **check_array_kwargs)
 
     def _validate_hyperparameters(self, X: np.ndarray) -> None:
         if not isinstance(self.n_components, int) or self.n_components < 1:
